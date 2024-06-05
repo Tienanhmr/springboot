@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Catalog</title>
+</head>
+<body>
+<h1>Vehicle Catalog</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Model</th>
+        <th>Year</th>
+        <th>Color</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="vehicle : ${vehicles}">
+        <td th:text="${vehicle.vehicleId}"></td>
+        <td th:text="${vehicle.vehicleName}"></td>
+        <td th:text="${vehicle.vehicleModel}"></td>
+        <td
